@@ -1,17 +1,6 @@
-import {api_key, base_url} from "../utils/constants.js";
-
-export const SET_WEATHER = 'SET_WEATHER'
-export const SET_MESSAGE = 'SET_MESSAGE'
-
-export const setWeather = (weather) => ({
-    type: SET_WEATHER,
-    payload: weather
-})
-
-export const setMessage = (message) => ({
-    type: SET_MESSAGE,
-    payload: message
-})
+import {api_key, base_url} from "../../utils/constants.js";
+import {setWeather} from "../weather/weatherSlice.js";
+import {setMessage} from "../message/messageSlice.js";
 
 export const fetchWeather = (city) => {
     return dispatch => {
